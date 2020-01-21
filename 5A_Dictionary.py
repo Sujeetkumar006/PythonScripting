@@ -11,7 +11,7 @@
 #Values can be of any data type and can repeat, keys must be of immutable type (string,number or tuple)must be unique
 
 
-#NOTE:- List is a linear collection of values that stay in order
+#NOTE :   ::- List is a linear collection of values that stay in order
 #NOTE:- DIct is a bag of values each with its own label
 
 
