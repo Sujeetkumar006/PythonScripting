@@ -1,0 +1,30 @@
+8) Interperator or compiler 
+1) memory managemnt in python: int size
+9) Threading
+10) Beautiful soup 
+17) map and reduce in python
+
+============
+packing and unpacking of dictionary
+handling csv
+API: numpy, scipy, panda, matlab
+14) Django/Flask
+json and xml reading
+DB connection
+Multi threading
+beautiful soap
+=================
+
+
+Completed: 
+2) Pythonn 2 to python 3 upgrade code.
+7) Difference between array and List in python.
+1) What is Pip in Python.
+3) Literals i python.
+6) Regular expression.
+12) oops concept
+11) global and local variables in python.
+5) Decorator/Generator
+13) lamda funcation
+16) operator
+5) date and time
