@@ -29,7 +29,7 @@ for fruit in 'Apple','Orange','Strawberry':
 for letter in 'python':
     print("current letter is",letter)
 	
-# Local and global variable in Loop. Any variable defined under loop can be used outside. 
+# Local and global variable in Loop. Any variable defined under loop or ifelse block can be used outside. 
 temp=0
 for temp in 'python':
     a=10
@@ -404,3 +404,71 @@ for temp in arg1:
         break
     counterindex =counterindex+1    
     
+##############################
+
+Banking Program:
+amount=10000
+choice='y'
+while (choice=='y'):
+    print("### 1. account balance:")
+    print("### 2. mini statement:")
+    print("### 3. deposit:")
+    print("### 4. withdraw")
+    print("### 5. Exit")
+    case=int(input("enter your choice:"))
+    if case==1:
+        print("account balance",amount)
+        choice=input('Do you want to conitnue y/n:')
+    elif case==2:
+        print("mini statement")
+        choice=input('Do you want to conitnue y/n:')
+    elif case==3:
+        amountd=int(input("enter the amount to be deposited:" ))
+        amount=amount+amountd
+        print("amount has been deposited now the balance is:",amount)
+        choice=input('Do you want to conitnue y/n:')             
+    elif case==4:
+        amountw=int(input("enter the amount to be withdrawn"))
+        amount=amount-amountw
+        print("amount has been withdrawn now the balance is:",amount)
+        choice=input('Do you want to conitnue y/n:')
+    elif case==5:
+        print("Exiting Now:")
+        break
+        
+     ===================================
+#Note : User is prompted to enter a guess. If the user guesses wrong then the prompt appears again 
+until the guess is correct, on successful guess, user will get a "Well guessed!" message, 
+and the program will exit.
+## Solutions:
+
+import random
+b=random.randint(1,9) 
+print("random value is ",b)
+count=0
+while (True):
+    if count>=3:
+            print('You have exceeded limit, Game over')
+            break
+    a=int(input('Enter the number between 1 to 9'))
+    count+=1
+    if a>9 or a<1:
+           print("Invalid value, Please enter the value in range 1 to 9")
+    elif a==b:
+        print("Well guessed!, You have taken", count, 'Attempt to guess the right number')
+        break
+	 
+==
+import random
+b=random.randint(1,9) 
+print("random value is ",b)
+count=0
+while (True):
+    a=int(input('Enter the number between 1 to 9'))
+    count+=1
+    if a>9 or a<1:
+        print("Invalid value, Please enter the value in range 1 to 9")
+    elif a==b:
+        print("Well guessed!, You have taken", count, 'Attempt to guess the right number')
+        break
+	

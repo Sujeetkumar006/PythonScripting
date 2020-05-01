@@ -112,11 +112,21 @@ for num in nextSquare():
 # To understand lets see the powerness of funcation first.
 #Functions are objects; they can be referenced to, passed to a variable and returned from other functions as well.Functions can be defined inside another function and can also be passed as argument to another function.
 
+#Essentially, decorators work as wrappers,
+# modifying the behavior of the code before and after a target function execution,
+# without the need to modify the function itself, 
+#augmenting the original functionality, thus decorating it.
+
+
+#*********  What you need to know ***********************
+#in python functions are first class citizens they are objects and that means we can do
+#a lot of useful stuff with them
+
 # Different funcation capabilities to be understand before getting into decorator:
 
 #A) Assigning Functions to Variables
-#To kick us off we create a function that will add one to a number whenever it is called. We'll then assign the function to a variable and use this variable to call the function.def 
-plus_one(number):
+#To kick us off we create a function that will add one to a number whenever it is called. We'll then assign the function to a variable and use this variable to call the function.
+def plus_one(number):
     return number + 1
 add_one = plus_one
 add_one(5)	
@@ -257,6 +267,13 @@ cities("Nairobi", "Accra")
 # A lambda function can take any number of arguments, but can only have one expression
 #One is free to use lambda functions wherever function objects are required.
 #You need to keep in your knowledge that lambda functions are syntactically restricted to a single expression.
+#Lambda expression also known as anonymous fun. becoz used only one time becoz of that we dont give name nor use def keyword.so instead of keyword def and fun name we replace it with keyword lambda
+
+#NOTE:- lambda is an expression not a statement
+#lambda's body is a single expression not a block of statements.
+#Becoz it is limited to an expression a lambda is less general that a def. 
+#we can only squeeze design to limit prog neating.
+#lambda is designed for coding simple functions and def handles larger tasks.
 
 
 # By using lambda you can simplifies the syntax of simple or small funcation:

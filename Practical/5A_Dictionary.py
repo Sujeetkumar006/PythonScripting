@@ -1,6 +1,6 @@
 #import copy
 #Dictionary in Python -->
-#1.Python dictionary is an unordered collection of item.
+#1.Python dictionary is an unordered and unsequential collection of item.
 #2.While other compund data types have only value as an elemnet a dictionary has a key value pair
 #3. Dict are optimized to retrieve values when the key is known
 

@@ -75,14 +75,13 @@ def function1():
 a,b,c=function1()
 print(a,b,c)
 
+
+
 #below code will also work
-
-c=function1()
-print(c)
-print(type(c))
-
-
-
+a=function1() # Can assign multiple retrun to same collection type tuple variable.
+print(a,b,c)
+print(a)
+print(type(a))
 
 
 #pass by value and pass by ref
@@ -109,8 +108,20 @@ def swapbyref(l):
 swapbyref(list1)
 print(list1)
 
+# Pass by value and pass by reference example along with global and local varaiable:
 
-
+a=[10,20,30] # Mutable, Passing . XXX
+b='ab' # Imutable , Passing . XXY
+c=123 # Immutable ,  Not Passing
+d=['a','b','c'] # Mutable , Not passing.
+def addition(a,b):  # addition(xxx, xxy)
+    d=['1','2']
+    c=456
+    a[0]=100 # a id : xxx
+    b='Pq' # XXY to XXZ.
+    print('Printing add:',a,b,c,d) #  XXX, XXZ, Id(c), id(d)
+addition(a,b) # additinon(10,20) # addition (id(a), id(b))
+print('Printing add:',a,b,c,d) # XXX, XXY, Id(c), id(d)
 
 #-------------------------------------------------------------------------------------------------------------
 
@@ -232,7 +243,17 @@ def greet(message ,*names ):
 greet("Monica","Steve","John","Hello world")  
 
 
+#### Example of All type of argument accoring to preceedence:
 
+def addition(cutid, userid, *a, b,c=0,**d):   # Positional, * variable lenght positiona;, Keyword, Keyword with Deafult,* variable lenght  keyword.
+  print(cutid)
+  print(userid)
+  print(a)
+  print(b)
+  print(c)
+  print(d)
+
+addition(123,345,334,4,5,5,6, b=100, c=101,d='anv',e='abc' )
 
 #-----------------------------------------------------------------------------------------------------------
 

@@ -27,7 +27,7 @@ End of code block detected by lack of indentation
 Or an empty line if entering statements into the interpreter"""
 
 #Evaluates an expression’s Boolean value and executes the associated block
-• False is 0, empty string, empty collection, and None; anything else is considered True
+• False is 0, empty string, empty collection, and None and  Boolean False; anything else is considered True
 
 
 # simple if else 

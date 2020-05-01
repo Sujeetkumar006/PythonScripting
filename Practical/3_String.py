@@ -173,7 +173,7 @@ print(default_order)
 
 
 default_order = "{}, {} and {}".format('John','Bill',123) # FOrmat argument can be int/float as well.
-print('\n--- Default Order ---')
+print('\n--- Default Order ---')   
 print(default_order)
 
 
@@ -299,3 +299,20 @@ finalelemt
 2) String index found for multiple occurnace:
 
 a='abcbcbcsfdjhkkbcjshdjcdlkjkfjckdkjkjbcjjdjjd' # Fid the coccurnce of bc. Hint: find/rfind, split .
+
+3) assignment for removeing char from first and last:
+
+a='    Hello world        again again1 again2           '
+counter =0
+counterend=0
+for i in a:
+   counter=counter+1
+   if (i !=" "):
+        break        
+a=a[counter-1::]
+while(True):
+    if a[len(a)-1]==' ':
+        a=a[:len(a)-1]
+    else:
+        break
+a

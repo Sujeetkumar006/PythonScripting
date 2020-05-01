@@ -32,7 +32,7 @@ print(a)
 a={'a':'ac','b':123, 'c':123.45, 'd':True, 'e':['abc','pqr'],'f':('abc','xyz'), 'g': {'abc':123, 'pqr':345}}
 print(a)
 
-# Values in key are mutable and can be modified.
+# Values in dict are mutable and can be modified.
 a={'a':'abc','b':"pqr",'c':'xyz'}
 print(a)
 a={'a':'abc','b':"pqr",'c':'xyz'}
