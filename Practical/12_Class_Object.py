@@ -92,7 +92,7 @@ print(emp1.empid,"  ",emp1.empname," ",emp1.basicsalary)
 #Note:- in above case we are not mentioning data type. as python do not do typecheck
 #and it will print it as it is
 
-emp2=Employee(1111,"Sujeet","12300")
+emp2=Employee(1111,"Sujeet","2500000")
 print(emp2.empid,"  ",emp2.empname," ",emp2.basicsalary)
 
 
@@ -102,8 +102,6 @@ print(emp2.empid,"  ",emp2.empname," ",emp2.basicsalary)
 #Class variables are shared - they can be accessed by all instances of that class. There is only one copy of the class variable and when any one object makes a change to a class variable, that change will be seen by all the other instances. Class object is refered/accessed by class name and not reference object name. Class variables are assigned outside of any method is class and used by class name inside the class. Somethimes it also be used as "self.__class__.variablename" but standared sytax is "class.variablename". Class variable in python is similar to static variable in java.
 
 #Object variables are owned by each individual object/instance of the class. In this case, each object has its own copy of the field i.e. they are not shared and are not related in any way to the field by the same name in a different instance. This is refered by object refrence variable. object variables are used by self inside the class
-
-#Both class and object variables can be accessed by anytype of methods (class, object, static) in class.
 
 # Namespace: object variable with the same name as a class variable will hide the class variable!. SO if some variable is at both class and object level , class variable will be refered by class name and object one will be refered by object reference.  
 
@@ -127,7 +125,7 @@ class Employee():
 
 #It may happen that is common in all object. need to define a attribute at class level
 
-emp2=Employee(1111,"Sujeet",12300)
+emp2=Employee(1111,"Sujeet",2300000)
 #print(emp2.empid,"  ",emp2.empname," ",emp2.basicsalary," ",emp3.companyname) #will give error
 print(emp2.empid,"  ",emp2.empname," ",emp2.basicsalary," ",Employee.companyname,' ', emp2.companyname)
 Employee.foo()
@@ -183,7 +181,7 @@ obj.staticmethod() # static method can be called by both object and class refere
 #It’s important to note that child classes override or extend the functionality (e.g., attributes and behaviors) of parent classes. In other words, child classes inherit all of the parent’s attributes and behaviors but can also specify different behavior to follow. The most basic type of class is an object, which generally all other classes inherit as their parent.
 
 #syntax:
-class BaseClass:
+class BaseClass():
   Body of base class
 class DerivedClass(BaseClass):
   Body of derived class

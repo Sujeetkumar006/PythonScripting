@@ -185,6 +185,8 @@ data.loc[(data.age >= 12) & (data.gender == 'M')]
 data.loc[1:3]
 # select few columns with a condition
 data.loc[(data.age >= 12), ['city', 'gender']]
+
+
 # update a column with condition
 data.loc[(data.age >= 12), ['section']] = 'M'
 data
@@ -276,7 +278,8 @@ data_frame.info()
 np.unique(data_frame['seller'])
 np.unique(data_frame['name'])
 
-#### ####  imporitng and Cleaning of Data: ######################
+
+#### ####  importing and Cleaning of Data: ######################
 # We need to know how missing values are represented in the dataset in order to make reasonable decisions 
 # The missing values exist in the form of ‘nan’, "##", "??" or in any special character ◦ Python,by default replace blank values with‘nan’
 # Now, importing the data considering other forms of missing values in a datafram
@@ -305,6 +308,29 @@ data_frame1=pd.read_csv('Toyota.csv', index_col=0, na_values=["??","????"]) # We
 print(data_frame1['FuelType'].nbytes) # nbytes check the space utilize by that columns.
 data_frame1['FuelType']= data_frame1['FuelType'].astype('category')
 print(data_frame1['FuelType'].nbytes)
+
+### Code to get the special charaters from row:
+abc=list(set(data_frame['KM']))
+abc1=list(set(data_frame['Doors']))
+def special_char(abc):
+ list1=[]
+ def is_int(val):
+    try:
+        num = int(val)
+    except ValueError:
+        return False
+    return True
+ for i in abc:
+   if is_int(i):
+    pass
+   else:
+    list1.append(i)
+ return list1
+res=special_char(abc)  
+res1=special_char(abc1) 
+print(res)
+print(res1)
+
 
 ### Cleaning column 
 #Checking unique values of variable ‘Doors’ and replacing those by some other values.:
@@ -353,7 +379,7 @@ data_frame1[bool_series]
 
 # TO check the values of occurance of particular values in a column.
 data_frame1['FuelType'].value_counts()
-
+data_frame1['FuelType'].value_counts()
 # Difference between size and count.
 data_frame1.size
 data_frame1.count()

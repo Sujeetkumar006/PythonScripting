@@ -118,7 +118,7 @@ plt.xticks(index, fuletype,rotation=90)
 plt.legend()
 plt.show()
 
-# ## LIne Graph
+# ## Line Graph
 
 from matplotlib import pyplot as plt
 #import matplotlib

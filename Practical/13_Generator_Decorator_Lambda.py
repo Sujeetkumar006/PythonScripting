@@ -263,7 +263,7 @@ cities("Nairobi", "Accra")
 
 ###############  Lamda Function ###############
 
-# A lambda function is a small anonymous function.
+# A lambda function is a small anonymous function . 
 # A lambda function can take any number of arguments, but can only have one expression
 #One is free to use lambda functions wherever function objects are required.
 #You need to keep in your knowledge that lambda functions are syntactically restricted to a single expression.
@@ -308,3 +308,26 @@ mydoubler = myfunc(2) #mydoubler will have the funcation object and 2 will be pa
 mytripler = myfunc(3)
 print(mydoubler(11)) # 11 will be passed as value a.
 print(mytripler(11)) 
+
+#we can use lambda in conjuction with map and filter
+#Now in case of map we do write a function and then call inside map
+#this thing can be more optimised by using lambda
+
+
+li1=list(map(lambda num:num**2 , mynumbers))
+print(li1)
+   
+#covert checkevene fun to lambda
+li2=list(filter(lambda num:num % 2 ==0 ,mynumbers))
+print(li2)
+#write a lambda to grab first char of names
+allnames=['Sachin','Ashish','Rahul','Mahendrasingh']
+li3=list(map(lambda name:name[0],allnames))
+print(li3)
+
+#write a lambda to reverse the names
+li4=list(map(lambda n:n[::-1],allnames))
+print("Reversed names ---->",li4)
+#Example
+allcars=(lambda a='FordFigo',b='Audi',c='Swift':a+b+c)
+print(allcars('Accent','Wolkswagen'))
